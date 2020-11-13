@@ -7,3 +7,4 @@ Make Card component
 Make CategoryCard component
 Make SearchCard component
 Make Signup component
+Make Slider component
