@@ -1,0 +1,9 @@
+Make input component
+Make button component
+Make Link component
+Make Hero component
+Make Footer component
+Make Card component
+Make CategoryCard component
+Make SearchCard component
+Make Signup component
