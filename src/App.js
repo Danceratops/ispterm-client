@@ -1,3 +1,4 @@
+import Footer from './components/footer'
 import Login from './components/login'
 import './styles/imports.scss'
 
@@ -8,6 +9,7 @@ function App() {
       <Login>
         <h1>inside the login</h1>
       </Login>
+      <Footer/>
     </div>
   );
 }
