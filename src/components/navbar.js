@@ -16,6 +16,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import HomeIcon from '@material-ui/icons/Home';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -157,6 +158,14 @@ export default function Nav() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+      <MenuItem component={Link} to="/products">
+        <IconButton aria-label="Go to products page" color="inherit">
+          <Badge color="secondary">
+            <AddCircleOutlineIcon />
+          </Badge>
+        </IconButton>
+        <p>Products</p>
+      </MenuItem>
     </Menu>
   );
 
@@ -186,6 +195,11 @@ export default function Nav() {
             <IconButton aria-label="Go to shopping cart" color="inherit" component={Link} to="/cart">
               <Badge color="secondary">
                 <ShoppingCartIcon />
+              </Badge>
+            </IconButton>
+            <IconButton aria-label="Go to products page" color="inherit" component={Link} to="/products">
+              <Badge color="secondary">
+                <AddCircleOutlineIcon />
               </Badge>
             </IconButton>
             <IconButton
