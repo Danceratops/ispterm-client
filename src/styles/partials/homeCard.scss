@@ -1,0 +1,49 @@
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card
+{
+    width: 250px;
+    height: 325px;
+    margin: 10px;
+    margin-top: 200px;
+    border: 3px solid black;
+    color: red;
+    flex: end;
+    background-color: white;
+}
+
+.image
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 25px;
+    position: relative;
+    top: 25px;
+    left: 25px;
+}
+
+.title
+{
+    font: 100;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    color:green;
+}
+
+.description
+{
+    font: 100;
+    position: relative;
+    top: 20px;
+    left: 100px;
+    color:green;
+}
+
+
