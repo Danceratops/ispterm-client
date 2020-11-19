@@ -1,6 +1,7 @@
 import React from "react";
 
 import Hero from "./../components/hero";
+import Slider from "./../components/slider";
 import Grid from "@material-ui/core/Grid";
 
 import heroBackground from "./../images/heroBackground.jpg";
@@ -19,7 +20,7 @@ const home = () => {
       </Hero>
       <Grid className="home-grid-container" container spacing={4}>
         <Grid className="home-grid-item-text" item xs={8}>
-          <h3 class="home-hthree">Why shop with us?</h3>
+          <h2 class="home-hthree">Why shop with us?</h2>
           <p class="home-p">
             Homegrown herbs is committed to organic and natural herbs for all
             aspects of life. All of our herbs come from sustainable and
@@ -43,7 +44,7 @@ const home = () => {
           />
         </Grid>
         <Grid className="home-grid-item-text" item xs={8}>
-          <h3 class="home-hthree">How do we ship sustainably?</h3>
+          <h2 class="home-hthree">How do we ship sustainably?</h2>
           <p class="home-p">
             Homegrown Herbs strives to lower our carbon emissions by using
             sustainable packaging and shipping methods. Our boxes are 100%
@@ -56,6 +57,11 @@ const home = () => {
           </p>
         </Grid>
       </Grid>
+      <hr></hr>
+      <Slider title="Now, what do we offer?">
+          <img src={boxes}/>
+          <img src={greenhouse} />
+      </Slider>
     </div>
   );
 };
