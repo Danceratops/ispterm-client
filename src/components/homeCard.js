@@ -17,6 +17,9 @@ const homecards = ({ children }) => {
         <div class="description">
           <h4>Excellent for:</h4>
         </div>
+        <div class="price">
+          <h5>$Price(Item)/lb</h5>
+        </div>
       </div>
     </div>
   );
