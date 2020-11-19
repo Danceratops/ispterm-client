@@ -25,6 +25,10 @@ function App() {
         </Switch>
       </Router>
       <Login/>
+      <h1>hello from outside login</h1>
+      <Login>
+        <h1>inside the login</h1>
+      </Login>
       <Footer/>
     </div>
   );
