@@ -4,7 +4,7 @@ import home from './Pages/home';
 import login from './Pages/login';
 import signup from './Pages/signup';
 import cart from './Pages/cart';
-import products from './Pages/products';
+import products from './Pages/search';
 
 import Nav from './components/navbar';
 
