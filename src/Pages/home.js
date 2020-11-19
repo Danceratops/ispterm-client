@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 
 import Hero from "./../components/hero";
@@ -17,7 +16,9 @@ const home = () => {
         subtitle="Perfect for any occasion"
         backgroundImg={heroBackground}
       >
-        <p><i>Start shopping now&hellip;</i></p>
+        <p>
+          <i>Start shopping now&hellip;</i>
+        </p>
       </Hero>
       <Grid className="home-grid-container" container spacing={4}>
         <Grid className="home-grid-item-text" item xs={8}>
@@ -60,28 +61,11 @@ const home = () => {
       </Grid>
       <hr></hr>
       <Slider title="Now, what do we offer?">
-          <img src={boxes}/>
-          <img src={greenhouse} />
+        <img src={boxes} />
+        <img src={greenhouse} />
       </Slider>
     </div>
   );
 };
 
 export default home;
-=======
-import React from 'react';
-import Homecards from '../components/homecard';
-import Hero from '../components/hero';
-
-const home = () => {
-    return (
-        <div class="home">
-            <h1>Home Page</h1>
-        
-            <Homecards/>
-        </div>
-    )
-}
-
-export default home;
->>>>>>> ff1fe70... Start with flexbox
