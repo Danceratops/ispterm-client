@@ -1,16 +1,7 @@
-.main-footer {
-  color: black;
+.footer {
+  color: $mintgreen;
   padding-top: 3em;
-  position: fixed;
-  top: 90%;
-  height: 60px;
+  height: 40vh;
   text-align: center;
-  bottom: 0;
   width: 100%;
-}
-
-.background {
-  //background-image: url("/images/herbsIcon.svg");
-  //  background-repeat: no-repeat;
-  // background-size: cover;
 }

@@ -1,15 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-//import Background from '/herbsIcon.svg'
+import Background from "./../images/footerBackground.svg";
 
 import "../styles/imports.scss";
 
 const Footer = () => {
   return (
-    <div className="main-footer">
+    <footer
+      style={{
+        backgroundImage: `url(${Background})`,
+        backgroundRepeat: `no-repeat`,
+        backgroundSize: `cover`,
+      }}
+    >
       <div className="box">
         <div className="column">
-          <img src={process.env.PUBLIC_URL + "/herbsIcon.svg"} />
           <p1 className="footer">
             {" "}
             &copy;{new Date().getFullYear()} ISP Term Project | All rights
@@ -19,7 +24,7 @@ const Footer = () => {
         </div>
         <div className="background"></div>
       </div>
-    </div>
+    </footer>
   );
 };
 
