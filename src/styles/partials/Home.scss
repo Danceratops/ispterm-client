@@ -15,6 +15,8 @@
     color: $green;
     font-style: italic;
     font-weight: 400;
+    text-align: left;
+    line-height: initial;
   }
 
   .home-img {
@@ -42,5 +44,16 @@
     .box {
         display: none;
     }
+
+    .home-hthree {
+      text-align: center;
+    }
   }
+}
+
+hr {
+  width: 95%;
+  margin: 3em auto;
+  border: 0;
+  border-top: 3px solid $green;
 }

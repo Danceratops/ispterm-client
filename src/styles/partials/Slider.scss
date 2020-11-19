@@ -1,0 +1,42 @@
+.slider-container {
+  margin-top: 25px;
+  h2 {
+    line-height: initial;
+    text-align: center;
+    color: $green;
+    font-style: italic;
+    font-weight: 400;
+  }
+  .slider {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto;
+
+    .BrainhubCarousel__arrows {
+      background-color: $green;
+
+      &:hover {
+        background-color: $mintgreen;
+      }
+    }
+
+    .BrainhubCarousel__trackContainer {
+      height: 50%;
+    }
+
+    .BrainhubCarouselItem {
+      align-items: unset;
+    }
+  }
+
+  .BrainhubCarousel__dots .BrainhubCarousel__dot {
+    background-color: transparent !important;
+
+    &:before {
+        width: 15px;
+        height: 15px;
+        border: 2px solid $mintgreen;
+        background: $gray;
+    }
+}
+}
