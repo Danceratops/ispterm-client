@@ -1,0 +1,46 @@
+.home-grid-container {
+  padding: 10px;
+  width: 100% !important;
+
+  .home-grid-item {
+    text-align: center;
+    align-self: center;
+  }
+
+  .home-grid-item-text {
+    padding: 50px;
+  }
+
+  .home-hthree {
+    color: $green;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .home-img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .home-p {
+    text-align: left;
+    color: $gray;
+    line-height: 3rem;
+  }
+
+  @media only screen and (max-width: $laptop) {
+    flex-direction: column;
+    text-align: center;
+    margin: 0px;
+    .home-grid-item,
+    .home-grid-item-text {
+      max-width: 100%;
+    }
+
+    .box {
+        display: none;
+    }
+  }
+}
