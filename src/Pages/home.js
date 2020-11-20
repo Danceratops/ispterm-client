@@ -64,6 +64,7 @@ const home = () => {
         <img src={boxes} />
         <img src={greenhouse} />
       </Slider>
+      <h1>Home Page</h1>
     </div>
   );
 };
