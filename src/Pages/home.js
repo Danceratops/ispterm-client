@@ -2,13 +2,40 @@ import React from "react";
 
 import Hero from "./../components/hero";
 import Slider from "./../components/slider";
+import FourCard from "./../components/fourCard";
 import Grid from "@material-ui/core/Grid";
 
 import heroBackground from "./../images/heroBackground.jpg";
 import greenhouse from "./../images/greenhouse.jpg";
 import boxes from "./../images/boxes.jpg";
+import feverFew from "./../images/feverfew.jpg";
+import ginger from "./../images/ginger.jpg";
+import goldenSeal from "./../images/goldenSeal.jpg";
+import milkThistle from "./../images/milkthistle.jpg";
 
 const home = () => {
+  const cardItemsMedicinal = [
+    {
+      exampleImage: { feverFew },
+      exampleImageAlt: "White flowers with a small yellow middle.",
+      exampleName: "Feverfew",
+    },
+    {
+      exampleImage: { ginger },
+      exampleImageAlt: "Large brown roots piled on top of each other.",
+      exampleName: "Ginger",
+    },
+    {
+      exampleImage: { goldenSeal },
+      exampleImageAlt: "Green leaves with five points.",
+      exampleName: "Golden Seal",
+    },
+    {
+      exampleImage: { milkThistle },
+      exampleImageAlt: "A large pink flower with green thistles just under the bloom.",
+      exampleName: "Milk Thistle",
+    },
+  ];
   return (
     <div class="home">
       <Hero
@@ -16,7 +43,9 @@ const home = () => {
         subtitle="Perfect for any occasion"
         backgroundImg={heroBackground}
       >
-        <p><i>Start shopping now&hellip;</i></p>
+        <p>
+          <i>Start shopping now&hellip;</i>
+        </p>
       </Hero>
       <Grid className="home-grid-container" container spacing={4}>
         <Grid className="home-grid-item-text" item xs={8}>
@@ -59,9 +88,14 @@ const home = () => {
       </Grid>
       <hr></hr>
       <Slider title="Now, what do we offer?">
-          <img src={boxes}/>
-          <img src={greenhouse} />
+        <img src={boxes} />
+        <img src={greenhouse} />
       </Slider>
+      <FourCard
+        title="Medicinal Herbs"
+        subtitle="Examples"
+        arrayOfExamples={cardItemsMedicinal}
+      />
     </div>
   );
 };
