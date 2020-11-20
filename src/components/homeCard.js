@@ -13,7 +13,6 @@ const homecards = ({ children }) => {
         <div class="title">
           <h3>name</h3>
         </div>
-        <br />
         <div class="description">
           <h4>Excellent for:</h4>
         </div>
