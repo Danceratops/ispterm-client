@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import Background from "./../images/footerBackground.svg";
 
 import "../styles/imports.scss";
-import { red } from "@material-ui/core/colors";
 const Footer = () => {
   return (
     <div className="main-footer">
