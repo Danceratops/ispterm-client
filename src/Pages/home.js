@@ -16,6 +16,7 @@ const home = () => {
         subtitle="Perfect for any occasion"
         backgroundImg={heroBackground}
       >
+        <br />
         <p>
           <i>Start shopping now&hellip;</i>
         </p>
@@ -64,7 +65,6 @@ const home = () => {
         <img src={boxes} />
         <img src={greenhouse} />
       </Slider>
-      <h1>Home Page</h1>
     </div>
   );
 };

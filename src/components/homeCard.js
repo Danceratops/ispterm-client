@@ -11,13 +11,13 @@ const homecards = ({ children }) => {
           <img class="img" src="https://picsum.photos/200" />
         </div>
         <div class="title">
-          <h3>name</h3>
+          <h4>Name</h4>
         </div>
         <div class="description">
           <h4>Excellent for:</h4>
         </div>
         <div class="price">
-          <h5>$Price(Item)/lb</h5>
+          <h4>$Price(Item)/lb</h4>
         </div>
       </div>
     </div>
