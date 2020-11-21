@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: row;
+  padding: 15px;
+
+  .image {
+    background-color: green;
+    min-height: 180px;
+    min-width: 180px;
+    margin: 30px;
+  }
+
+  .image img {
+    height: 180px;
+    width: auto;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .generaltext {
+    height: 200px;
+    background-color: yellow;
+
+    .price-title h3 {
+      display: inline-block;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: $green;
+      text-align: left;
+    }
+
+    .price-title h4 {
+      display: inline-block;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: $green;
+      text-align: center;
+    }
+
+    .description {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: $green;
+      text-align: left;
+      word-break: break-all;
+    }
+  }
+}
