@@ -9,8 +9,6 @@ import Nav from "./components/navbar";
 
 import "./styles/imports.scss";
 import Footer from "./components/footer";
-import Login from "./components/login";
-import "./styles/imports.scss";
 
 function App() {
   return (

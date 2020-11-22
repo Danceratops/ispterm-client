@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import Background from "./../images/footerBackground.svg";
 
 import "../styles/imports.scss";
@@ -14,8 +13,10 @@ const Footer = () => {
           backgroundSize: `cover`,
         }}
       >
-        &copy;{new Date().getFullYear()} ISP Term Project <br /> Stephan
-        Gunawardana Danielle Reed Douglas Rudy
+        <footer>
+          &copy;{new Date().getFullYear()} ISP Term Project | Stephan
+          Gunawardana Danielle Reed Douglas Rudy
+        </footer>
       </div>
     </div>
   );
