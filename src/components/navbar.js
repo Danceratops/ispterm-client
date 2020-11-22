@@ -158,14 +158,6 @@ export default function Nav() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
-      <MenuItem component={Link} to="/search">
-        <IconButton aria-label="Go to search page" color="inherit">
-          <Badge color="secondary">
-            <AddCircleOutlineIcon />
-          </Badge>
-        </IconButton>
-        <p>Search</p>
-      </MenuItem>
     </Menu>
   );
 
