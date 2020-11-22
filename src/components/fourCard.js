@@ -5,7 +5,7 @@ export default function FourCard({ title, subtitle, arrayOfExamples }) {
     const exampleItems = arrayOfExamples.map((exampleItem) =>
         <li key={exampleItem.exampleName}>
             <img src={exampleItem.exampleImage} alt={exampleItem.exampleImageAlt} />
-            <h6>{exampleItem.exampleName}</h6>
+            <h6><i>{exampleItem.exampleName}</i></h6>
         </li>
     );
 
