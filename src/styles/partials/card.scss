@@ -6,9 +6,9 @@
   margin: 0 auto;
   flex-direction: row;
   padding: 15px;
+  flex-wrap: nowrap;
 
   .image {
-    background-color: green;
     min-height: 180px;
     min-width: 180px;
     margin: 30px;
@@ -16,34 +16,44 @@
 
   .image img {
     height: 180px;
-    width: auto;
+    width: 180px;
     border-radius: 10px;
     position: relative;
   }
 
   .generaltext {
-    height: 200px;
-    background-color: yellow;
+    height: 250px;
 
     .price-title h3 {
+      font-size: xx-large;
+      font-weight: bold;
       display: inline-block;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: $green;
-      text-align: left;
+      text-align: center;
+      margin-bottom: 10px;
+      margin-right: 10px;
     }
 
     .price-title h4 {
+      font-size: x-large;
+      font-weight: 400;
       display: inline-block;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       color: $green;
-      text-align: center;
+      margin-bottom: 0px;
     }
 
-    .description {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      color: $green;
+    .description p {
       text-align: left;
-      word-break: break-all;
+      color: $green;
+      word-wrap: break-word;
+      margin-top: 0px;
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
   }
 }
