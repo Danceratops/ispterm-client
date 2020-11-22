@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom/Link';
+import { Link } from 'react-router-dom';
 
 import { fade, makeStyles } from '@material-ui/core/styles';
 
@@ -164,7 +164,7 @@ export default function Nav() {
 
   return (
     <div className={classes.grow}>
-      <AppBar position="static" style={{backgroundColor: '#7AAC88'}}>
+      <AppBar position="fixed" style={{backgroundColor: '#7AAC88'}}>
         <Toolbar>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
