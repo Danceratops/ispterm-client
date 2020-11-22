@@ -158,13 +158,13 @@ export default function Nav() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
-      <MenuItem component={Link} to="/products">
-        <IconButton aria-label="Go to products page" color="inherit">
+      <MenuItem component={Link} to="/search">
+        <IconButton aria-label="Go to search page" color="inherit">
           <Badge color="secondary">
             <AddCircleOutlineIcon />
           </Badge>
         </IconButton>
-        <p>Products</p>
+        <p>Search</p>
       </MenuItem>
     </Menu>
   );
@@ -197,7 +197,7 @@ export default function Nav() {
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
-            <IconButton aria-label="Go to products page" color="inherit" component={Link} to="/products">
+            <IconButton aria-label="Go to search page" color="inherit" component={Link} to="/search">
               <Badge color="secondary">
                 <AddCircleOutlineIcon />
               </Badge>

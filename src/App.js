@@ -4,7 +4,8 @@ import home from './Pages/home';
 import login from './Pages/login';
 import signup from './Pages/signup';
 import cart from './Pages/cart';
-import products from './Pages/search';
+import products from './Pages/products';
+import search from './Pages/search'
 
 import Nav from './components/navbar';
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/signup' component={signup}/>
           <Route exact path='/cart' component={cart}/>
           <Route exact path='/products' component={products}/>
+          <Route exact path='/search' component={search}/>
         </Switch>
       </Router>
     </div>

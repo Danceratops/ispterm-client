@@ -2,7 +2,7 @@ import React from 'react';
 
 import Card from '../components/card'
 
-const products = () => {
+const search = () => {
     return (
         <div class="home">
             <h1>Search Page</h1>
@@ -11,4 +11,4 @@ const products = () => {
     )
 }
 
-export default products
+export default search
