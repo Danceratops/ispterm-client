@@ -169,6 +169,10 @@ const home = () => {
       </Grid>
       <hr></hr>
       <Slider title="Now, what do we offer?">
+      {/* eslint-disable-next-line */}
+          <img src={boxes}/>
+          {/* eslint-disable-next-line */}
+          <img src={greenhouse} />
         <img src={boxes} />
         <img src={greenhouse} />
       </Slider>
