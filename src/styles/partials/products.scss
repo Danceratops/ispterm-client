@@ -1,0 +1,28 @@
+.product-image {
+  border: 2px solid rgba(39, 7, 58, 0.322);
+  height: 580px;
+}
+
+.product-image img {
+  border: 2px solid rgb(219, 69, 0);
+  border-radius: 15%;
+  width: auto;
+  height: 400px;
+  text-align: center;
+}
+
+.product-text {
+  border: 2px solid blue;
+}
+
+.product-title {
+  color: $green;
+  padding-top: 12%;
+  //  padding-left: 5%;
+}
+
+.product-price {
+  color: $green;
+  padding-top: 16%;
+  padding-left: 10%;
+}
