@@ -19,6 +19,3 @@ export default function Slider({ children, title }) {
 Slider.propTypes = {
   title: PropTypes.string
 }
-
-
-
