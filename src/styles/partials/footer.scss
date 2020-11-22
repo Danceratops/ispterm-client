@@ -1,0 +1,18 @@
+footer {
+  color: black;
+  padding-top: relative;
+  background-color: $mintgreen;
+  height: 20vh;
+  text-align: center;
+}
+
+.subfooter {
+  background-color: $green;
+  text-align: center;
+
+  small {
+    color: white;
+    position: relative;
+    bottom: 0;
+  }
+}
