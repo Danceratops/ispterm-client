@@ -8,17 +8,20 @@ export default function Slider({ children, title }) {
   return (
     <div class="slider-container">
       <h2>{title}</h2>
-      <Carousel className="slider" arrows infinite centered slidesPerPage={2} dots>
-      {children}
-    </Carousel>
+      <Carousel
+        className="slider"
+        arrows
+        infinite
+        centered
+        slidesPerPage={2}
+        dots
+      >
+        {children}
+      </Carousel>
     </div>
-    
   );
 }
 
 Slider.propTypes = {
-  title: PropTypes.string
-}
-
-
-
+  title: PropTypes.string,
+};

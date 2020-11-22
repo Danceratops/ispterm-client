@@ -2,26 +2,33 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "../styles/imports.scss";
+import { People } from "@material-ui/icons";
 
-const homecards = ({ children }) => {
+const HomeCard = ({ children, Name, Description, Price, Image }) => {
   return (
     <div class="container">
       <div class="card">
         <div class="image">
-          <img class="img" src="https://picsum.photos/200" />
+          <img class="img" src={Image} />
         </div>
         <div class="title">
-          <h4>Name</h4>
+          <h4>{Name}</h4>
         </div>
         <div class="description">
-          <h4>Excellent for:</h4>
+          <h4>{Description}</h4>
         </div>
         <div class="price">
-          <h4>$Price(Item)/lb</h4>
+          <h4>{Price}</h4>
         </div>
       </div>
     </div>
   );
 };
 
-export default homecards;
+HomeCard.propTypes = {
+  Name: PropTypes.string,
+  Description: PropTypes.string,
+  Price: PropTypes.string,
+  Image: PropTypes.string,
+};
+export default HomeCard;
