@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "../styles/imports.scss";
-import { People } from "@material-ui/icons";
 
 const HomeCard = ({ children, Name, Description, Price, Image }) => {
   return (
@@ -15,10 +14,10 @@ const HomeCard = ({ children, Name, Description, Price, Image }) => {
           <h4>{Name}</h4>
         </div>
         <div class="description">
-          <h4>{Description}</h4>
+          <h4>Excellent for:{Description}</h4>
         </div>
         <div class="price">
-          <h4>{Price}</h4>
+          <h4>${Price}/lb</h4>
         </div>
       </div>
     </div>

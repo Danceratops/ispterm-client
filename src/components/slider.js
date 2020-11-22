@@ -13,7 +13,7 @@ export default function Slider({ children, title }) {
         arrows
         infinite
         centered
-        slidesPerPage={2}
+        slidesPerPage={3}
         dots
       >
         {children}
