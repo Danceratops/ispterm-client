@@ -35,6 +35,14 @@
     .login-box {
       margin: 20px 0;
     }
+
+    .login-button{
+      position: relative;
+
+      .progress {
+        position: absolute;
+      }
+    }
   }
 
   .login-signup {

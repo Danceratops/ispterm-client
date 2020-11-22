@@ -5,12 +5,14 @@ import axios from "axios";
 
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const Login = ({ UI, loginUser, user }) => {
   //state initialization
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
 
   /*useEffect(() => {
     if (UI.errors) {
@@ -20,17 +22,20 @@ const Login = ({ UI, loginUser, user }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setLoading(true);
     const userData = {
       email: email,
       password: password,
     };
     axios
-      .post("/login", userData)
+      .post(`/login`, userData)
       .then((res) => {
         console.log(res.data);
+        setLoading(false);
         window.history.pushState("/");
       })
       .catch((err) => {
+        setLoading(false);
         setErrors({
           error: err.response.data,
         });
@@ -39,14 +44,14 @@ const Login = ({ UI, loginUser, user }) => {
 
   return (
     <div className="login-container">
-        <h1>Welcome back to the garden...</h1>
+      <h1>Welcome back to the garden...</h1>
       <div className="login">
         <form noValidate onSubmit={handleSubmit} className="login-form">
           <h2>Login</h2>
           <TextField
             required
             className="login-box"
-            id="outlined-required"
+            id="email"
             label="Email"
             variant="outlined"
             type="email"
@@ -58,7 +63,7 @@ const Login = ({ UI, loginUser, user }) => {
           <TextField
             required
             className="login-box"
-            id="outlined-required"
+            id="password"
             label="Password"
             variant="outlined"
             type="password"
@@ -67,8 +72,10 @@ const Login = ({ UI, loginUser, user }) => {
             helperText={errors.password}
             error={errors.password ? true : false}
           />
-          <Button className="login-button" variant="contained" type="submit">
-            Log In
+          <Button className="login-button" variant="contained" type="submit" disabled={loading}>
+            Login {loading && (
+                <CircularProgress size={30} className="progress" />
+            )}
           </Button>
         </form>
         <hr />
