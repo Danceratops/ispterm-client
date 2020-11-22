@@ -3,7 +3,7 @@ import Background from "./../images/footerBackground.svg";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="complete-footer">
       <footer
         style={{
           backgroundImage: `url(${Background})`,
@@ -11,7 +11,7 @@ const Footer = () => {
           backgroundSize: `cover`,
         }}
       ></footer>
-      <div class="subfooter">
+      <div className="subfooter">
         <small>
           &copy;{new Date().getFullYear()} ISP Term Project | Stephan
           Gunawardana Danielle Reed Douglas Rudy

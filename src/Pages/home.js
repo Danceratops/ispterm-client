@@ -130,8 +130,8 @@ const home = () => {
       </Hero>
       <Grid className="home-grid-container" container spacing={4}>
         <Grid className="home-grid-item-text" item xs={8}>
-          <h2 class="home-hthree">Why shop with us?</h2>
-          <p class="home-p">
+          <h2 className="home-hthree">Why shop with us?</h2>
+          <p className="home-p">
             Homegrown herbs is committed to organic and natural herbs for all
             aspects of life. All of our herbs come from sustainable and
             eco-friendly farms or greenhouses. Our seeds are non-GMO and we pay
@@ -141,14 +141,14 @@ const home = () => {
         </Grid>
         <Grid className="home-grid-item" item xs={4}>
           <img
-            class="home-img"
+            className="home-img"
             src={greenhouse}
             alt="A greenhouse filled with lots of greenary."
           />
         </Grid>
         <Grid className="home-grid-item" item xs={4}>
           <img
-            class="home-img box"
+            className="home-img box"
             src={boxes}
             alt="A stack of two white boxes on a reclaimed wood background."
           />
