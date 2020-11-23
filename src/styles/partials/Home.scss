@@ -21,7 +21,7 @@
 
   .home-img {
     border-radius: 15px;
-    width: 100%;
+    width: 50%;
     height: auto;
     margin: 0 auto;
   }
@@ -31,7 +31,6 @@
     color: $gray;
     line-height: 3rem;
   }
-
   @media only screen and (max-width: $laptop) {
     flex-direction: column;
     text-align: center;
@@ -42,7 +41,7 @@
     }
 
     .box {
-        display: none;
+      display: none;
     }
 
     .home-hthree {
@@ -73,7 +72,8 @@ hr {
 
 .category-text {
   text-align: center;
-  h2, h3 {
+  h2,
+  h3 {
     font-weight: 200;
     font-style: italic;
     color: $green;

@@ -1,37 +1,82 @@
-.product-image {
-  border: 2px solid rgba(39, 7, 58, 0.322);
-  height: 580px;
-  padding-top: 5%;
-}
+.product-grid-container {
+  padding: 50px;
+  width: 100% !important;
 
-.product-image img {
-  border: 2px solid rgb(219, 69, 0);
-  border-radius: 15%;
-  width: auto;
-  height: 400px;
-  text-align: center;
-}
+  .product-picture {
+    text-align: center;
+    align-self: center;
+  }
 
-.product-text {
-  border: 2px solid blue;
-}
+  .product-text {
+    padding: 50px;
+  }
 
-.product-title {
-  color: $green;
-  padding-top: 12%;
-  font-size: 290%;
-  font-weight: normal;
-}
+  .product-box {
+    padding-top: 1%;
+    padding-right: 2%;
+    padding-left: 2%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    border: 2px solid $green;
+    background-color: $lightgray;
+    border-radius: 10%;
+  }
 
-.product-price {
-  color: $green;
-  padding-top: 17%;
-  font-size: 190%;
-  font-weight: lighter;
-  border: 2px solid rgb(219, 69, 0);
-  padding-left: 6%;
-}
+  .product-title {
+    color: $green;
+    font-weight: bold;
+    text-align: left;
+    line-height: initial;
+    font-size: 40px;
+  }
 
-.product-desc {
-  border: 2px solid blue;
+  .product-price {
+    color: red;
+  }
+
+  .product-desc {
+    color: $green;
+  }
+
+  .product-img {
+    border-radius: 15px;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .quantity-input {
+    background-color: $lightblue;
+    left: 30px;
+  }
+
+  .pounds-total {
+    color: $mintgreen;
+  }
+
+  .amount {
+    color: $mintgreen;
+  }
+
+  @media only screen and (max-width: $laptop) {
+    flex-direction: column;
+    text-align: center;
+    margin: 0px;
+    .product-picture,
+    .product-text {
+      max-width: 100%;
+    }
+
+    .product-title {
+      text-align: center;
+    }
+    .product-price {
+      text-align: center;
+    }
+
+    .product-box {
+      text-align: center;
+      max-width: 100%;
+    }
+  }
 }
