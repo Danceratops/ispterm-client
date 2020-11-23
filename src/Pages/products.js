@@ -12,8 +12,8 @@ const products = () => {
           xs={6}
           container
           direction="column"
-          justify="center"
-          alignItems="flex-end"
+          justify="flex-start"
+          alignItems="center"
         >
           <img src={greenhouse} />
         </Grid>
@@ -22,13 +22,13 @@ const products = () => {
           className="product-text"
           item
           xs={6}
-          container="row"
+          container="column"
           justify="flex-start"
           alignItems="flex-start"
         >
           <h1 className="product-title">Parsley</h1>
           <p1 className="product-price">Price</p1>
-          <h1 className="product-desc">hello</h1>
+          <p1 className="product-desc"></p1>
         </Grid>
       </Grid>
     </div>
