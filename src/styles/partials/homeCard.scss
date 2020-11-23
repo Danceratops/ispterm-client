@@ -10,8 +10,8 @@
   padding-right: 2%;
   padding-left: 2%;
   margin-top: 10%;
-  border: 2px solid rgb(74, 114, 85);
-  background-color: rgb(231, 235, 232);
+  border: 2px solid $green;
+  background-color: $lightgray;
 }
 
 .image {
@@ -24,7 +24,7 @@
 
 .image img {
   height: 250px;
-  border: 1px solid rgb(122, 172, 136);
+  border: 1px solid $mintgreen;
   width: auto;
   border-radius: 15%;
   display: block;
@@ -32,7 +32,7 @@
   margin-right: auto;
 }
 
-.title {
+.product-title {
   top: 11%;
   color: $mintgreen;
   font-family: "Segoe UI";
@@ -40,7 +40,7 @@
   text-align: center;
 }
 
-.description {
+.product-description {
   bottom: 10px;
   color: $mintgreen;
   font-family: "Segoe UI";
@@ -48,7 +48,7 @@
   text-align: center;
 }
 
-.price {
+.product-price {
   bottom: 20px;
   color: $mintgreen;
   font-family: "Segoe UI";

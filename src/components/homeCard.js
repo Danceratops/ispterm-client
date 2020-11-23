@@ -10,13 +10,13 @@ const HomeCard = ({ children, Name, Description, Price, Image }) => {
         <div class="image">
           <img class="img" src={Image} />
         </div>
-        <div class="title">
+        <div class="product-title">
           <h4>{Name}</h4>
         </div>
-        <div class="description">
+        <div class="product-description">
           <h4>Excellent for:{Description}</h4>
         </div>
-        <div class="price">
+        <div class="product-price">
           <h4>${Price}/lb</h4>
         </div>
       </div>

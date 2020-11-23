@@ -125,7 +125,6 @@ const home = () => {
         subtitle="Perfect for any occasion"
         backgroundImg={heroBackground}
       >
-        <br />
         <p>
           <i>Start shopping now&hellip;</i>
         </p>

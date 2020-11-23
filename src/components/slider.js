@@ -15,6 +15,20 @@ export default function Slider({ children, title }) {
         centered
         slidesPerPage={3}
         dots
+        breakpoints={{
+          1400: {
+            slidesPerPage: 2,
+            slidesToScroll: 1,
+          },
+          1024: {
+            slidesPerPage: 1,
+            slidesToScroll: 1,
+          },
+          900: {
+            slidesPerPage: 1,
+            slidesToScroll: 1,
+          },
+        }}
       >
         {children}
       </Carousel>
