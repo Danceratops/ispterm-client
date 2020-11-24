@@ -42,7 +42,7 @@
     }
 
     .box {
-        display: none;
+      display: none;
     }
 
     .home-hthree {
@@ -74,7 +74,8 @@ hr {
 
 .category-text {
   text-align: center;
-  h2, h3 {
+  h2,
+  h3 {
     font-weight: 200;
     font-style: italic;
     color: $green;

@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import heroBackground from "./../images/heroBackground.jpg";
 import greenhouse from "./../images/greenhouse.jpg";
 import boxes from "./../images/boxes.jpg";
+import Homecards from "./../components/homeCard";
 import feverFew from "./../images/feverfew.jpg";
 import ginger from "./../images/ginger.jpg";
 import goldenSeal from "./../images/goldenSeal.jpg";
@@ -169,12 +170,12 @@ const home = () => {
       </Grid>
       <hr></hr>
       <Slider title="Now, what do we offer?">
-      {/* eslint-disable-next-line */}
-          <img src={boxes}/>
-          {/* eslint-disable-next-line */}
-          <img src={greenhouse} />
-        <img src={boxes} />
-        <img src={greenhouse} />
+        <Homecards
+          Name="Cellary"
+          Description="Tea"
+          Price="1.22"
+          Image="https://picsum.photos/200/"
+        />
       </Slider>
       <hr></hr>
       <div class="category-text">
