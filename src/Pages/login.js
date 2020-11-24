@@ -25,8 +25,7 @@ const Login = ({ UI, loginUser, user }) => {
     axios
       .post(`/login`, userData)
       .then((res) => {
-        const token = res.data;
-        localStorage.setItem('token', token);
+        localStorage.setItem('token', res.data.token);
         setLoading(false);
         history.push("/");
       })
