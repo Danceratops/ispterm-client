@@ -1,0 +1,52 @@
+.login-container {
+  margin: 100px 0;
+
+  h1 {
+    text-align: center;
+    font-style: italic;
+    color: $mintgreen;
+    font-weight: 100;
+  }
+}
+
+.login {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $green;
+  border-radius: 20px;
+  width: 40%;
+  background-color: #e7ebe8;
+
+  @media only screen and (max-width: $laptop) {
+    width: 80%;
+  }
+
+  h2 {
+    color: $green;
+  }
+
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    .login-box {
+      margin: 20px 0;
+    }
+
+    .login-button{
+      position: relative;
+
+      .progress {
+        position: absolute;
+      }
+    }
+  }
+
+  .login-signup {
+    color: $green;
+    margin-bottom: 50px;
+  }
+}
