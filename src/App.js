@@ -7,6 +7,8 @@ import cart from "./Pages/cart";
 import products from "./Pages/products";
 import search from "./Pages/search";
 import product from "./Pages/product";
+import signout from "./Pages/Signout";
+import thankyou from "./Pages/thankyou";
 
 import Nav from "./components/navbar";
 
@@ -25,6 +27,8 @@ function App() {
             <Route exact path="/cart" component={cart} />
             <Route exact path="/products" component={products} />
             <Route exact path="/search" component={search} />
+            <Route exact path="/signout" component={signout} />
+            <Route exact path="/thankyou" component={thankyou} />
             <Route exact path="/product/:productId" component={product} />
           </Switch>
         </Router>

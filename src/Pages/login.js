@@ -6,11 +6,10 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const Login = ({ UI, loginUser, user }) => {
+const Login = () => {
   //state initialization
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
   var history = useHistory();
@@ -25,8 +24,7 @@ const Login = ({ UI, loginUser, user }) => {
     axios
       .post(`/login`, userData)
       .then((res) => {
-        const token = res.data;
-        localStorage.setItem('token', token);
+        localStorage.setItem("token", res.data.token);
         setLoading(false);
         history.push("/");
       })
@@ -40,7 +38,7 @@ const Login = ({ UI, loginUser, user }) => {
     <div className="login-container">
       <h1>Welcome back to the garden...</h1>
       <div className="login">
-        <form noValidate onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <h2>Login</h2>
           <TextField
             required
@@ -51,8 +49,6 @@ const Login = ({ UI, loginUser, user }) => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            helperText={errors.email}
-            error={errors.email ? true : false}
           />
           <TextField
             required
@@ -63,8 +59,6 @@ const Login = ({ UI, loginUser, user }) => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            helperText={errors.password}
-            error={errors.password ? true : false}
           />
           <Button
             className="login-button"

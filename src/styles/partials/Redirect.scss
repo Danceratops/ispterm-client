@@ -1,0 +1,27 @@
+.thank-you-container {
+    width: 80%;
+    border: 1px solid $green;
+    border-radius: 15px;
+    background-color: #e7ebe8;
+    margin: 100px auto;
+    text-align: center;
+    line-height: 3rem;
+    padding: 10px;
+    h1, h2, p {
+        color: $green;
+    }
+
+    .thank-you-link {
+        text-decoration: none;
+        font-style: italic;
+        font-weight: bold;
+
+        &:visited {
+            color: $green;
+        }
+
+        &:hover {
+            color: $mintgreen;
+        }
+    }
+}
