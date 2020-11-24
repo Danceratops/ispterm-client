@@ -108,7 +108,6 @@ export default function Nav() {
   const logout = () => {
     handleMenuClose();
     localStorage.removeItem("token");
-    history.push({ pathname: "/thankyou", state: { action: "logout" } });
   };
 
   const handleMobileMenuOpen = (event) => {
@@ -118,7 +117,7 @@ export default function Nav() {
   const tokenNull = (
     <div>
       {(localStorage.getItem("token") !== null) ? (
-        <MenuItem onClick={logout} component={Link} to="/">
+        <MenuItem onClick={logout} component={Link} to="/signout">
           Logout
         </MenuItem>
       ) : (

@@ -11,7 +11,6 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState({});
 
   var history = useHistory();
 
@@ -28,7 +27,7 @@ const Signup = () => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         setLoading(false);
-        history.push({ pathname: "/thankyou", state: { action: "signup" } });
+        history.push({pathname: "/thankyou", state: {action: "signin"}});
       })
       .catch((err) => {
         setLoading(false);
@@ -37,10 +36,10 @@ const Signup = () => {
   };
   return (
     <div className="login-container">
-      <h1>Welcome back to the garden...</h1>
+      <h1>We can't wait for you to sign up!</h1>
       <div className="login">
-        <form noValidate onSubmit={handleSubmit} className="login-form">
-          <h2>Login</h2>
+        <form onSubmit={handleSubmit} className="login-form">
+          <h2>Sign-up</h2>
           <TextField
             required
             className="login-box"
@@ -50,8 +49,6 @@ const Signup = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            helperText={errors.email}
-            error={errors.email ? true : false}
           />
           <TextField
             required
@@ -62,8 +59,6 @@ const Signup = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            helperText={errors.password}
-            error={errors.password ? true : false}
           />
           <TextField
             required
@@ -74,8 +69,6 @@ const Signup = () => {
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            helperText={errors.password}
-            error={errors.password ? true : false}
           />
           <Button
             className="login-button"

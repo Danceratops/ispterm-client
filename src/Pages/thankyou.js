@@ -1,16 +1,14 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const Thankyou = ({action}) => {
-    return(
-        <div className="thank-you-container">
-            
-        </div>
-    );
-}
+const Thankyou = ( ) => {
+  return (
+    <div className="thank-you-container">
+      <h1>Welcome to our community!</h1>
+      <h2>Enjoy the products we have and look forward to those to come.</h2>
+      <p>Check out all of our products <Link className="thank-you-link" to="/search">here</Link>!</p>
+    </div>
+  );
+};
 
-Thankyou.propTypes = {
-    action: PropTypes.string.isRequired
-}
-
-export default Thankyou
+export default Thankyou;

@@ -10,7 +10,6 @@ const Login = () => {
   //state initialization
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
   var history = useHistory();
@@ -27,7 +26,7 @@ const Login = () => {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         setLoading(false);
-        history.push({ pathname: "/thankyou", state: { action: "login" } });
+        history.push("/");
       })
       .catch((err) => {
         setLoading(false);
@@ -39,7 +38,7 @@ const Login = () => {
     <div className="login-container">
       <h1>Welcome back to the garden...</h1>
       <div className="login">
-        <form noValidate onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit} className="login-form">
           <h2>Login</h2>
           <TextField
             required
@@ -50,8 +49,6 @@ const Login = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            helperText={errors.email}
-            error={errors.email ? true : false}
           />
           <TextField
             required
@@ -62,8 +59,6 @@ const Login = () => {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            helperText={errors.password}
-            error={errors.password ? true : false}
           />
           <Button
             className="login-button"
