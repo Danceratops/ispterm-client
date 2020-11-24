@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import axios from "axios";
 
 import TextField from "@material-ui/core/TextField";
@@ -14,11 +13,7 @@ const Login = ({ UI, loginUser, user }) => {
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
-  /*useEffect(() => {
-    if (UI.errors) {
-      setErrors({ errors: UI.errors });
-    }
-  }, []); */
+  var history = useHistory();
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -30,15 +25,14 @@ const Login = ({ UI, loginUser, user }) => {
     axios
       .post(`/login`, userData)
       .then((res) => {
-        console.log(res.data);
+        const token = res.data;
+        localStorage.setItem('token', token);
         setLoading(false);
-        window.history.pushState("/");
+        history.push("/");
       })
       .catch((err) => {
         setLoading(false);
-        setErrors({
-          error: err.response.data,
-        });
+        console.log(err);
       });
   };
 
@@ -72,10 +66,14 @@ const Login = ({ UI, loginUser, user }) => {
             helperText={errors.password}
             error={errors.password ? true : false}
           />
-          <Button className="login-button" variant="contained" type="submit" disabled={loading}>
-            Login {loading && (
-                <CircularProgress size={30} className="progress" />
-            )}
+          <Button
+            className="login-button"
+            variant="contained"
+            type="submit"
+            disabled={loading}
+          >
+            Login{" "}
+            {loading && <CircularProgress size={30} className="progress" />}
           </Button>
         </form>
         <hr />
@@ -85,12 +83,6 @@ const Login = ({ UI, loginUser, user }) => {
       </div>
     </div>
   );
-};
-
-Login.propTypes = {
-  loginUser: PropTypes.func.isRequired,
-  user: PropTypes.object.isRequired,
-  UI: PropTypes.object.isRequired,
 };
 
 export default Login;

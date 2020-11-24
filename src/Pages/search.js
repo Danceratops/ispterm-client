@@ -15,7 +15,7 @@ const Search = () => {
     }, []);
 
     var productMarkUp = products ? (
-    products.map(product => <Card key={product.productName} title={product.productName} price={product.productPrice} description={product.Description} imageSource={product.image} />)
+    products.map(product => <Card key={product.productId} title={product.productId} price={product.productPrice} description={product.Description} imageSource={product.image} />)
     ) : (<p>Loading...</p>)
 
     console.log(productMarkUp);
