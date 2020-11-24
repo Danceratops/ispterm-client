@@ -6,7 +6,7 @@ import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
 import CircularProgress from "@material-ui/core/CircularProgress";
 
-const Login = ({ UI, loginUser, user }) => {
+const Login = () => {
   //state initialization
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -25,9 +25,9 @@ const Login = ({ UI, loginUser, user }) => {
     axios
       .post(`/login`, userData)
       .then((res) => {
-        localStorage.setItem('token', res.data.token);
+        localStorage.setItem("token", res.data.token);
         setLoading(false);
-        history.push("/");
+        history.push({ pathname: "/thankyou", state: { action: "login" } });
       })
       .catch((err) => {
         setLoading(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import { fade, makeStyles } from "@material-ui/core/styles";
 
@@ -87,6 +87,8 @@ export default function Nav() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
+  var history = useHistory();
+
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
@@ -106,6 +108,7 @@ export default function Nav() {
   const logout = () => {
     handleMenuClose();
     localStorage.removeItem("token");
+    history.push({ pathname: "/thankyou", state: { action: "logout" } });
   };
 
   const handleMobileMenuOpen = (event) => {
