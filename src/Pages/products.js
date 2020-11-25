@@ -13,9 +13,8 @@ const Products = () => {
           <img class="product-img" src={greenhouse} alt=" "></img>
         </div>
         <div className="product-title-price">
-          <h1 className="product-title">Parsley</h1>
-          <h2 className="product-price">Price</h2>
-          <p1>
+          <h1 className="product-title">Parsley $3.99</h1>
+          <p1 className="product-desc">
             Parsley is widely used in Middle Eastern, Mediterranean, Brazilian,
             and American cuisine. Curly leaf parsley is used often as a garnish.
             Green parsley is used frequently as a garnish on potato dishes

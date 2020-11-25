@@ -4,37 +4,51 @@
   //background-color: red;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 
   .product-picture {
     //text-align: center;
     //align-self: center;
   }
 
+  .product-title-price {
+    display: flex;
+    //background-color: blue;
+    flex-direction: column;
+
+    // display: inline-block;
+  }
+
   .product-title {
     color: $green;
     font-weight: bold;
-    text-align: left;
+    //text-align: center;
     line-height: initial;
     font-size: 80px;
-    position: relative;
-    top: 100px;
-  }
-
-  .product-title-price {
-    //background-color: blue;
-    // display: inline-block;
+    //margin-left: 90px;
+    //position: relative;
+    //top: 100px;
+    // border: 3px solid green;
+    //margin: 0px auto;
+    margin-left: 140px;
+    justify-content: flex-start;
+    align-self: flex-start;
   }
 
   .product-price {
     color: $green;
-    position: relative;
-    bottom: 25px;
-    padding-right: 125px;
+    font-weight: normal;
+    //position: relative;
+    // bottom: 25px;
+    // padding-right: 125px
   }
 
   .product-desc {
     color: $green;
-    //background-color: green;
+    text-align: center;
+    margin-left: 140px;
+    justify-content: flex-start;
+    align-self: flex-start;
   }
 
   .product-img {
@@ -42,10 +56,6 @@
     height: 600px;
     width: 1500px;
     margin: 0 auto;
-  }
-
-  .product-title {
-    background-color: black;
   }
 
   .pounds-total {
@@ -61,27 +71,31 @@
     text-align: center;
     margin: 0px;
     .product-picture,
-    .product-text {
+    .product-title-price {
       max-width: 100%;
     }
 
     .product-title {
       text-align: center;
-      position: relative;
-      top: 20px;
+      //position: relative;
+      // top: 20px;
+      margin: 0px auto;
     }
-    .product-price {
+    .product-desc {
       text-align: center;
+      margin: 0px auto;
     }
   }
 }
 
 .product-box {
-  width: 50% !important;
+  width: 42% !important;
   display: flex;
   justify-content: space-between;
+  justify-content: flex-start;
+
   align-items: center;
-  flex-shrink: 3;
+  // flex-shrink: 3;
   // margin-left: 5%;
   margin-bottom: 10%;
   border: 2px solid $green;
@@ -96,13 +110,22 @@
   .product-icon {
     transform: scale(1.8);
     color: $mintgreen;
-    position: relative;
-    right: 10px;
+    margin-left: 80px;
   }
 
   .quantity-input {
     border-radius: 10px;
     margin: 20px;
+    margin-right: 50px;
+  }
+
+  .pounds-total {
+    color: $mintgreen;
+    margin-left: 10px;
+    margin-right: 50px;
+  }
+  .product-output-price {
+    color: $mintgreen;
   }
   @media only screen and (max-width: $laptop) {
     flex-direction: column;
