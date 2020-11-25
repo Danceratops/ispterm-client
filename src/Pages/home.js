@@ -171,10 +171,34 @@ const home = () => {
       <hr></hr>
       <Slider title="Now, what do we offer?">
         <Homecards
-          Name="Cellary"
-          Description="Tea"
-          Price="1.22"
-          Image="https://picsum.photos/200/"
+          Name="Cilantro"
+          Description="Salsa"
+          Price="2.99"
+          Image="https://firebasestorage.googleapis.com/v0/b/isp-term.appspot.com/o/cilantro.jpg?alt=media&token=60a6184a-9bbd-4fd4-a285-d4833b3bce61"
+        />
+        <Homecards
+          Name="Basil"
+          Description="Italian Dishes"
+          Price="2.00"
+          Image="https://firebasestorage.googleapis.com/v0/b/isp-term.appspot.com/o/basil.jpg?alt=media&token=cd9c3726-800d-49ef-96e4-7597ab95c62b"
+        />
+        <Homecards
+          Name="Chives"
+          Description="Eggs"
+          Price="2.49"
+          Image="https://firebasestorage.googleapis.com/v0/b/isp-term.appspot.com/o/chives.jpg?alt=media&token=911e3ad7-2cfa-4845-9a73-5f79e455b7b3"
+        />
+        <Homecards
+          Name="Tumeric"
+          Description="Soups"
+          Price="3.49"
+          Image="https://firebasestorage.googleapis.com/v0/b/isp-term.appspot.com/o/tumeric.jpg?alt=media&token=5735beb1-865a-4ee6-9deb-81ff6cc76f24"
+        />
+        <Homecards
+          Name="Rosemary"
+          Description="Vegetable butter"
+          Price="2.75"
+          Image="https://firebasestorage.googleapis.com/v0/b/isp-term.appspot.com/o/rosemary.jpg?alt=media&token=5c513602-48c6-46eb-bd43-81ac0104600e"
         />
       </Slider>
       <hr></hr>
