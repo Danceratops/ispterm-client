@@ -1,25 +1,13 @@
 .product-grid-container {
   padding: 50px;
   width: 100% !important;
+  //background-color: red;
+  display: flex;
+  flex-direction: row;
 
   .product-picture {
-    text-align: center;
-    align-self: center;
-  }
-
-  .product-text {
-    padding: 50px;
-  }
-
-  .product-box {
-    padding-top: 1%;
-    padding-right: 2%;
-    padding-left: 2%;
-    margin-top: 20%;
-    margin-bottom: 20%;
-    border: 2px solid $green;
-    background-color: $lightgray;
-    border-radius: 10%;
+    //text-align: center;
+    //align-self: center;
   }
 
   .product-title {
@@ -27,27 +15,37 @@
     font-weight: bold;
     text-align: left;
     line-height: initial;
-    font-size: 40px;
+    font-size: 80px;
+    position: relative;
+    top: 100px;
+  }
+
+  .product-title-price {
+    //background-color: blue;
+    // display: inline-block;
   }
 
   .product-price {
-    color: red;
+    color: $green;
+    position: relative;
+    bottom: 25px;
+    padding-right: 125px;
   }
 
   .product-desc {
     color: $green;
+    //background-color: green;
   }
 
   .product-img {
     border-radius: 15px;
-    width: 80%;
-    height: auto;
+    height: 600px;
+    width: 1500px;
     margin: 0 auto;
   }
 
-  .quantity-input {
-    background-color: $lightblue;
-    left: 30px;
+  .product-title {
+    background-color: black;
   }
 
   .pounds-total {
@@ -69,13 +67,48 @@
 
     .product-title {
       text-align: center;
+      position: relative;
+      top: 20px;
     }
     .product-price {
       text-align: center;
     }
+  }
+}
 
+.product-box {
+  width: 50% !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 3;
+  // margin-left: 5%;
+  margin-bottom: 10%;
+  border: 2px solid $green;
+  background-color: $lightgray;
+  border-radius: 20px;
+  //position: relative;
+  //left: 850px;
+  //height: 140px;
+  color: $mintgreen;
+  margin: 0px auto;
+
+  .product-icon {
+    transform: scale(1.8);
+    color: $mintgreen;
+    position: relative;
+    right: 10px;
+  }
+
+  .quantity-input {
+    border-radius: 10px;
+    margin: 20px;
+  }
+  @media only screen and (max-width: $laptop) {
+    flex-direction: column;
+    text-align: center;
+    margin: 0px auto;
     .product-box {
-      text-align: center;
       max-width: 100%;
     }
   }
