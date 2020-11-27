@@ -1,0 +1,51 @@
+.home {
+  .header {
+    line-height: 150px;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+    color: $green;
+    font-size: 30px;
+  }
+
+  h4 {
+    color: $green;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .ship-container {
+    margin: 25px auto;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: 1px solid $green;
+    border-radius: 20px;
+    width: 30%;
+    background-color: #e7ebe8;
+
+    .name-box,
+    .address-box {
+      padding: 10px;
+      width: 100%;
+    }
+
+    .state-zip {
+      .state-box {
+        padding: 10px;
+        width: 50%;
+      }
+
+      .zipcode-box {
+        padding: 10px;
+        width: 50%;
+      }
+    }
+
+    .instructions-box {
+      padding: 10px;
+    }
+  }
+}
