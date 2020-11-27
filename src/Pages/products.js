@@ -1,11 +1,17 @@
 import React, { useState } from "react";
-import Grid from "@material-ui/core/Grid";
 import greenhouse from "./../images/greenhouse.jpg";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import TextField from "@material-ui/core/TextField";
 
 const Products = () => {
   const [quantity, setQuantity] = useState("");
+
+  const handleChange = (e) => {
+    var quantity;
+    quantity = e.target.value;
+    setQuantity(quantity);
+  };
+
   return (
     <div class="home">
       <div className="product-grid-container">
@@ -33,9 +39,10 @@ const Products = () => {
           label="Quantity"
           variant="outlined"
           value={quantity}
+          onChange={handleChange}
         />
         <h1 className="pounds-total">lbs = Total: </h1>
-        <h1 className="product-output-price">$2.13</h1>
+        <h1 className="product-output-price"> ${quantity}</h1>
         <ShoppingCartIcon className="product-icon" />
       </div>
     </div>
