@@ -14,7 +14,7 @@ const HomeCard = ({ children, Name, Description, Price, Image }) => {
           <h4>{Name}</h4>
         </div>
         <div class="product-description">
-          <h4>Excellent for:{Description}</h4>
+          <h4>Excellent for: {Description}</h4>
         </div>
         <div class="product-price">
           <h4>${Price}/lb</h4>

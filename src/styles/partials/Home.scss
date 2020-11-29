@@ -21,7 +21,7 @@
 
   .home-img {
     border-radius: 15px;
-    width: 100%;
+    width: 50%;
     height: auto;
     margin: 0 auto;
   }
@@ -31,7 +31,6 @@
     color: $gray;
     line-height: 3rem;
   }
-
   @media only screen and (max-width: $laptop) {
     flex-direction: column;
     text-align: center;
