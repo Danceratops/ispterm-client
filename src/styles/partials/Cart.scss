@@ -6,6 +6,32 @@
     font-style: italic;
     color: $green;
     font-size: 30px;
+    .table-container {
+      .main-table {
+        width: 70%;
+        margin: 0 auto;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: #e7ebe8;
+
+        th,
+        td {
+          white-space: nowrap;
+          color: $green;
+          font-size: 30px;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+        }
+
+        .image {
+          width: 180px;
+          height: auto;
+          border-radius: 10px;
+          position: relative;
+        }
+      }
+    }
   }
 
   h4 {
@@ -15,37 +41,129 @@
     text-align: center;
   }
 
-  .ship-container {
+  .cart-container {
     margin: 25px auto;
     margin-bottom: 75px;
     display: flex;
-    flex-direction: column;
-    align-items: left;
+    flex-direction: row;
+    justify-content: flex-start;
     border: 1px solid $green;
     border-radius: 20px;
-    width: 30%;
+    width: 70%;
     background-color: #e7ebe8;
 
-    .name-box,
-    .address-box {
-      padding: 10px;
-      width: 100%;
-    }
-
-    .state-zip {
-      .state-box {
+    .ship-container {
+      width: 400px;
+      .name-box,
+      .address-box {
         padding: 10px;
-        width: 50%;
+        width: 400px;
       }
 
-      .zipcode-box {
+      .state-zip {
+        .state-box,
+        .zipcode-box {
+          padding: 10px;
+          width: 200px;
+        }
+      }
+
+      .instructions-box {
         padding: 10px;
-        width: 50%;
+        width: 400px;
       }
     }
 
-    .instructions-box {
-      padding: 10px;
+    .divider {
+      background-color: $green;
+      width: 3px;
+      margin: 10px;
+    }
+
+    .checkout-container {
+      width: 400px;
+      text-align: center;
+      .visa-button {
+        width: auto;
+        height: 60px;
+        position: relative;
+        margin-right: 20px;
+      }
+
+      .paypal-button {
+        width: auto;
+        height: 60px;
+        position: relative;
+        margin-left: 30px;
+      }
+    }
+
+    .react-icon {
+      transform: scale(2);
+      margin-right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+  .home {
+    .header {
+      .table-container {
+        .main-table {
+          th,
+          td {
+            white-space: nowrap;
+            font-size: 2vw;
+          }
+          .image {
+            width: 50px;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    h4 {
+      margin-left: 10px;
+      text-align: left;
+    }
+
+    .cart-container {
+      flex-direction: column;
+      text-align: left;
+      justify-content: left;
+      .ship-container {
+        .name-box,
+        .address-box {
+          max-width: 300px;
+        }
+
+        .state-zip {
+          .state-box,
+          .zipcode-box {
+            max-width: 150px;
+          }
+        }
+
+        .instructions-box {
+          max-width: 300px;
+        }
+      }
+      .divider {
+        width: 0px;
+        font-size: 0px;
+        margin: 0px;
+      }
+
+      .checkout-container {
+        .visa-button,
+        .paypal-button {
+          width: auto;
+          height: 60px;
+          margin-left: 0px;
+          margin-right: 50px;
+        }
+      }
     }
   }
 }
