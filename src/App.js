@@ -5,7 +5,7 @@ import login from "./Pages/login";
 import signup from "./Pages/signup";
 import cart from "./Pages/cart";
 import search from "./Pages/search";
-import product from "./Pages/product";
+import product from "./Pages/products";
 import signout from "./Pages/Signout";
 import thankyou from "./Pages/thankyou";
 
@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/search" component={search} />
           <Route exact path="/signout" component={signout} />
           <Route exact path="/thankyou" component={thankyou} />
-          <Route exact path="/product/:productId" component={product} />
+          <Route exact path="/products/:productId" component={product} />
         </Switch>
       </Router>
       <Footer />

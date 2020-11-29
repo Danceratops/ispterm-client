@@ -8,7 +8,7 @@ const HomeCard = ({ Name, Description, Price, Image }) => {
     <div class="container">
       <div class="card">
         <div class="image">
-          <img class="img" src={Image} />
+          <img class="img" src={Image} alt={Name}/>
         </div>
         <div class="product-title">
           <h4>{Name}</h4>
