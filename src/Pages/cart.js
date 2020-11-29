@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import ShoppingCart from "../components/shoppingCart";
 
@@ -152,6 +153,8 @@ const Cart = () => {
         <form className="checkout-container">
           <h4>Pay With</h4>
           <Button
+            component={Link}
+            to="/wrapup"
             className="visa-button"
             variant="contained"
             color="primary"
@@ -161,6 +164,8 @@ const Cart = () => {
             Visa
           </Button>
           <Button
+            component={Link}
+            to="/wrapup"
             className="paypal-button"
             variant="contained"
             color="primary"
