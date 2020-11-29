@@ -169,6 +169,23 @@ const Cart = () => {
             <FaPaypal className="react-icon" />
             PayPal
           </Button>
+          <div className="billing-information">
+            <div className="bill-header">
+              <p1> Subtotal </p1>
+              <p1> Taxes </p1>
+              <p1> Shipping </p1>
+              <p1> Total </p1>
+            </div>
+            <div className="bill-extension">
+              <p1> {subTotal} </p1>
+              <br></br>
+              <p1> $1.27 </p1>
+              <br></br>
+              <p1> $5.55 </p1>
+              <br></br>
+              <p1> $20.65 </p1>
+            </div>
+          </div>
         </form>
       </div>
     </div>

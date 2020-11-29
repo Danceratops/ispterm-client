@@ -96,6 +96,33 @@
         position: relative;
         margin-left: 30px;
       }
+      .billing-information {
+        .bill-header {
+          color: $green;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 30px;
+          float: left;
+          width: 50%;
+          padding: 10px;
+          line-height: 2;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+
+        .bill-extension {
+          color: $green;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 30px;
+          float: left;
+          width: 50%;
+          padding: 10px;
+          line-height: 2;
+        }
+      }
     }
 
     .react-icon {
@@ -162,6 +189,12 @@
           height: 60px;
           margin-left: 0px;
           margin-right: 50px;
+        }
+        .billing-information {
+          .bill-header,
+          .bill-extension {
+            text-align: left;
+          }
         }
       }
     }
