@@ -7,9 +7,7 @@ const Products = () => {
   const [quantity, setQuantity] = useState("");
 
   const handleChange = (e) => {
-    var quantity;
-    quantity = e.target.value;
-    setQuantity(quantity);
+    setQuantity(e.target.value);
   };
 
   return (
@@ -19,7 +17,7 @@ const Products = () => {
           <img class="product-img" src={greenhouse} alt=" "></img>
         </div>
         <div className="product-title-price">
-          <h1 className="product-title">Parsley $3.99</h1>
+          <h1 className="product-title">Title $3.99</h1>
           <p1 className="product-desc">
             Parsley is widely used in Middle Eastern, Mediterranean, Brazilian,
             and American cuisine. Curly leaf parsley is used often as a garnish.
