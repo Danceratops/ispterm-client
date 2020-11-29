@@ -1,9 +1,20 @@
-import React from "react";
+import Button from "@material-ui/core/Button";
+import { Link } from "react-router-dom";
 
 const Page404 = () => {
   return (
-    <div class="home">
-      <h1>Cart Page</h1>
+    <div className="container">
+      <h1 className="error-text">404 ERROR!</h1>
+      <h3 className="error-text">You have entered the wrong garden!</h3>
+      <Button
+        component={Link}
+        to="/"
+        className="error-button"
+        variant="contained"
+        color="primary"
+      >
+        Return to Your Garden
+      </Button>
     </div>
   );
 };
