@@ -22,7 +22,7 @@
   }
 
   .generaltext {
-    height: 250px;
+    height: 220px;
 
     .price-title h3 {
       font-size: xx-large;
@@ -47,6 +47,17 @@
       color: $green;
       word-wrap: break-word;
       margin-top: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    .image img {
+      height: 220px;
+      width: 220px;
     }
   }
 }
