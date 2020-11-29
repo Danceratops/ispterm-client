@@ -1,37 +1,24 @@
 .product-grid-container {
   padding: 50px;
   width: 100% !important;
-  //background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 
   .product-picture {
     padding-top: 50px;
-    //text-align: center;
-    //align-self: center;
-    //background-color: red;
   }
 
   .product-title-price {
     display: flex;
-    //background-color: blue;
     flex-direction: column;
-
-    // display: inline-block;
   }
 
   .product-title {
     color: $green;
     font-weight: bold;
-    //text-align: center;
     line-height: initial;
     font-size: 80px;
-    //margin-left: 90px;
-    //position: relative;
-    //top: 100px;
-    // border: 3px solid green;
-    //margin: 0px auto;
     margin-left: 140px;
     justify-content: flex-start;
     align-self: flex-start;
@@ -40,9 +27,6 @@
   .product-price {
     color: $green;
     font-weight: normal;
-    //position: relative;
-    // bottom: 25px;
-    // padding-right: 125px
   }
 
   .product-desc {
@@ -87,28 +71,21 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  //justify-content: center;
   position: relative;
   bottom: 200px;
   left: 175px;
 
   align-items: center;
-  // flex-shrink: 3;
-  // margin-left: 5%;
-  //margin-bottom: 10%;
   border: 2px solid $green;
   background-color: $lightgray;
   border-radius: 20px;
-  //position: relative;
-  //left: 850px;
-  //height: 140px;
   color: $mintgreen;
   margin: 0px auto;
 
   .product-icon {
     transform: scale(1.8);
+    margin-left: 20px;
     color: $mintgreen;
-    //margin-left: 80px;
   }
 
   .quantity-input {
@@ -128,14 +105,11 @@
     flex-direction: row;
     text-align: center;
     justify-content: space-between;
-    //margin: 0px auto;
     min-width: 50%;
     position: relative;
     top: -50px;
     left: 20px;
     font-size: 10px;
-    //overflow: auto;
-    //min-width: 25px;
     margin-top: 20px;
     margin-bottom: 20px;
 
