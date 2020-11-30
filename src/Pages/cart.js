@@ -77,45 +77,42 @@ const Cart = () => {
   return (
     <div class="home">
       <div class="header">
-        <h4>Your Basket...</h4>
-        <div class="table-container">
-          <table class="main-table">
-            <tr>
-              <th> Item </th>
-              <th></th>
-              <th> Quantity(lbs.) </th>
-              <th> Cost Per Lb </th>
-              <th> Total </th>
-            </tr>
-            <ShoppingCart
-              image="https://www.uakron.edu/contentAsset/image/1c5c9d78-d829-4a80-ba2a-32f1f70b9944/fileAsset/byInode/1/filter/Resize/resize_w/140"
-              title="Xiao's Favorite"
-              quantity="7"
-              price="74.99"
-            />
-          </table>
-        </div>
+        <h4 className="cart-text">Your Basket...</h4>
+        <table class="main-table">
+          <tr>
+            <th> Item </th>
+            <th> Quantity(lbs.) </th>
+            <th> Cost Per Lb </th>
+            <th> Total </th>
+          </tr>
+          <ShoppingCart
+            image="https://www.uakron.edu/contentAsset/image/1c5c9d78-d829-4a80-ba2a-32f1f70b9944/fileAsset/byInode/1/filter/Resize/resize_w/140"
+            title="Xiao's Favorite"
+            quantity="7"
+            price="74.99"
+          />
+        </table>
       </div>
       <div className="cart-container">
         <form className="ship-container">
-          <h4>Ship To</h4>
-          <TextField
-            required
-            className="name-box"
-            id="full-name"
-            label="Full Name"
-            variant="outlined"
-            type="full-name"
-          />
-          <TextField
-            required
-            className="address-box"
-            id="address"
-            label="Address"
-            variant="outlined"
-            type="address"
-          />
-          <div className="state-zip">
+          <h4 className="cart-text">Ship To</h4>
+          <div className="input-container">
+            <TextField
+              required
+              className="name-box"
+              id="full-name"
+              label="Full Name"
+              variant="outlined"
+              type="full-name"
+            />
+            <TextField
+              required
+              className="address-box"
+              id="address"
+              label="Address"
+              variant="outlined"
+              type="address"
+            />
             <TextField
               required
               select
@@ -139,19 +136,19 @@ const Cart = () => {
               variant="outlined"
               type="zipcode"
             />
+            <TextField
+              multiline
+              className="instructions-box"
+              id="instructions"
+              label="Delivery instructions (optional)"
+              variant="outlined"
+              type="instructions"
+            />
           </div>
-          <TextField
-            multiline
-            className="instructions-box"
-            id="instructions"
-            label="Delivery instructions (optional)"
-            variant="outlined"
-            type="instructions"
-          />
         </form>
         <div className="divider"></div>
         <form className="checkout-container">
-          <h4>Pay With</h4>
+          <h4 className="cart-text">Pay With</h4>
           <Button
             component={Link}
             to="/wrapup"
@@ -176,19 +173,22 @@ const Cart = () => {
           </Button>
           <div className="billing-information">
             <div className="bill-header">
-              <p1> Subtotal </p1>
-              <p1> Taxes </p1>
-              <p1> Shipping </p1>
-              <p1> Total </p1>
+              Subtotal
+              <br></br>
+              Taxes
+              <br></br>
+              Shipping
+              <br></br>
+              Total
             </div>
             <div className="bill-extension">
-              <p1> {subTotal} </p1>
+              {subTotal}
               <br></br>
-              <p1> $1.27 </p1>
+              $1.27
               <br></br>
-              <p1> $5.55 </p1>
+              $5.55
               <br></br>
-              <p1> $20.65 </p1>
+              $20.65
             </div>
           </div>
         </form>

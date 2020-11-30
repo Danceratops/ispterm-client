@@ -4,15 +4,14 @@ import "../styles/imports.scss";
 
 const ShoppingCart = ({ quantity, price, title, image }) => {
   return (
-    <tr>
-      <td>
-        {" "}
-        <img className="image" src={image}></img>{" "}
+    <tr className="row-content">
+      <td className="image-title-cart ">
+        <img className="image" src={image}></img>
+        {title}
       </td>
-      <td> {title} </td>
-      <td> {price} </td>
-      <td> {quantity} </td>
-      <td> 25.00 </td>
+      <td className="image-cart"> {quantity} </td>
+      <td className="image-cart"> {price} </td>
+      <td className="image-cart"> 100.00 </td>
     </tr>
   );
 };
