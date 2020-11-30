@@ -61,7 +61,7 @@ const Products = () => {
         subtotal= parseFloat(subtotal) + parseFloat(quantity * product.productPrice);
         localStorage.setItem("cartAmount", oldAmount);
         localStorage.setItem(params.productId, true);
-        localStorage.setItem('subtotal', subtotal);
+        localStorage.setItem('subtotal', subtotal.toFixed(2));
       } else {
         setError("Cannot add item already in cart.");
       }

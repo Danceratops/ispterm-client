@@ -73,9 +73,7 @@ const stateAbbreviations = [
 ];
 
 const Cart = () => {
-  const [subTotal] = useState(
-    localStorage.getItem("subtotal") || 0
-  );
+  const [subTotal] = useState(localStorage.getItem("subtotal") || 0);
   const [cart, setCart] = useState(null);
 
   useEffect(() => {
@@ -204,7 +202,7 @@ const Cart = () => {
               <br></br>${(subTotal * 0.08).toFixed(2)}
               <br></br>
               $5.55
-              <br></br>${parseFloat(subTotal) + 1.27 + 5.55}
+              <br></br>${(parseFloat(subTotal) + 1.27 + 5.55).toFixed(2)}
             </div>
           </div>
         </form>
@@ -221,7 +219,9 @@ const Cart = () => {
       <h1>
         Please create and account or login to continue the checkout process.
       </h1>
-      <Link to="/signup" className='thank-you-link'>Here</Link>
+      <Link to="/signup" className="thank-you-link">
+        Here
+      </Link>
     </div>
   );
 };
