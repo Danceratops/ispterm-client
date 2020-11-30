@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "../styles/imports.scss";
 
-const ShoppingCart = ({ quantity, price, title, image }) => {
+const ShoppingCart = ({ quantity, price, title, image, total }) => {
+
+  var endTotal = total.toFixed(2)
   return (
     <tr className="row-content">
       <td className="image-title-cart ">
-        <img className="image" src={image}></img>
+        <img className="image" src={image} alt={title}></img>
         {title}
       </td>
       <td className="image-cart"> {quantity} </td>
       <td className="image-cart"> {price} </td>
-      <td className="image-cart"> 100.00 </td>
+      <td className="image-cart"> {endTotal} </td>
     </tr>
   );
 };

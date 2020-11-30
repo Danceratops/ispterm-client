@@ -45,18 +45,23 @@ const Products = () => {
       let oldCart = JSON.parse(localStorage.getItem("cart")) || [];
       let oldAmount = localStorage.getItem("cartAmount") || 0;
       let inTheCart = localStorage.getItem(params.productId) || false;
+      let subtotal = localStorage.getItem('subtotal') || 0;
       if (!inTheCart) {
         var newItem = {
           productName: params.productId,
           productPrice: product.productPrice,
           productImage: product.image,
           productQuantity: quantity,
+          productTotal: (quantity * product.productPrice)
         };
+        
         setInCart(true);
         oldCart.push(newItem);
         oldAmount++;
+        subtotal= parseFloat(subtotal) + parseFloat(quantity * product.productPrice);
         localStorage.setItem("cartAmount", oldAmount);
         localStorage.setItem(params.productId, true);
+        localStorage.setItem('subtotal', subtotal);
       } else {
         setError("Cannot add item already in cart.");
       }

@@ -89,13 +89,15 @@ export default function Nav() {
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
-  useEffect(() => {
-    setInCart(localStorage.getItem("cartAmount"));
-  }, [inCart]);
-
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
+  useEffect (() => {
+    window.addEventListener('click', () => {
+      setInCart(localStorage.getItem("cartAmount"));
+    })
+  }, []);
 
   const handleMobileMenuClose = () => {
     setMobileMoreAnchorEl(null);
