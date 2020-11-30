@@ -2,75 +2,101 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
-const Product = () => {
-  const params = useParams();
-  const [product, setProduct] = useState(null);
-  console.log(params);
-  useEffect(() => {
-      axios.get(`/products/${params.productId}`).then((res) => {
-        setProduct(res.data);
-        console.log(res.data);
-      }).catch((err)=>{
-          console.log(err);
-      })
-  }, []);
-  return (
-    <div class="home">
-      <h1>hello</h1>
-    </div>
-  );
-};
-
-export default Product;
-import React, { useState } from "react";
-import greenhouse from "./../images/greenhouse.jpg";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import TextField from "@material-ui/core/TextField";
+import IconButton from "@material-ui/core/IconButton";
 import PropTypes from "prop-types";
 
 const Products = () => {
-  const [quantity, setQuantity] = useState("");
+  const [quantity, setQuantity] = useState(0);
+  const [error, setError] = useState("");
+  var params = useParams();
+  const [product, setProduct] = useState({});
+
+  useEffect(() => {
+    axios
+      .get(`/products/${params.productId}`)
+      .then((res) => {
+        console.log(res.data);
+        setProduct(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, [params]);
 
   const handleChange = (e) => {
+    setError("");
     setQuantity(e.target.value);
   };
 
+  const onClick = (e) => {
+    if (quantity <= 0) {
+      setError("Cannot add quantity of amount zero or less.");
+    } else {
+      let oldCart = JSON.parse(localStorage.getItem("cart")) || [];
+      let valueArr = oldCart.map(function (item) {
+        console.log(item.productName);
+        return item.productName;
+      });
+
+      var hasDuplicateName = valueArr.some(function (item, idx) {
+        return valueArr.indexOf(item.productName) !== idx;
+      });
+      if (!hasDuplicateName) {
+        var newItem = {
+          productName: params.productId,
+          productPrice: product.productPrice,
+          productImage: product.image,
+          productQuantity: quantity,
+        };
+        oldCart.push(newItem);
+      } else {
+        setError("Cannot add item already in cart.");
+      }
+
+      localStorage.setItem("cart", JSON.stringify(oldCart));
+    }
+  };
+
+  console.log(product);
   return (
-    <div class="home">
+    <div className="home">
       <div className="product-grid-container">
         <div className="product-picture">
-          <img class="product-img" src={greenhouse} alt=" "></img>
+          <img
+            class="product-img"
+            src={product.image}
+            alt={params.productId}
+          ></img>
         </div>
-        <div className="product-title-price">
-          <h1 className="product-title">Title $3.99</h1>
-          <p1 className="product-desc">
-            Parsley is widely used in Middle Eastern, Mediterranean, Brazilian,
-            and American cuisine. Curly leaf parsley is used often as a garnish.
-            Green parsley is used frequently as a garnish on potato dishes
-            (boiled or mashed potatoes), on rice dishes (risotto or pilaf), on
-            fish, fried chicken, lamb, goose, and steaks, as well in meat or
-            vegetable stews (i**ncluding shrimp creole, beef bourguignon,
-            goulash, or chicken paprikash).
-          </p1>
+        <div className="product-details-box">
+          <div className="product-title-price">
+            <h1 className="product-title">
+              {params.productId} ${product.productPrice}
+            </h1>
+            <p className="product-desc">{product.Description}</p>
+          </div>
+          <div className="product-box">
+            <TextField
+              type="text"
+              className="quantity-input"
+              id="quantity"
+              label="Quantity"
+              variant="outlined"
+              value={quantity}
+              onChange={handleChange}
+            />
+            <h1 className="pounds-total">lbs </h1>
+            <h1 className="pounds-total">
+              Total: ${(quantity * product.productPrice).toFixed(2)}
+            </h1>
+            <IconButton onClick={onClick}>
+              <ShoppingCartIcon className="product-icon" />
+              <p>{error ? error : ""}</p>
+            </IconButton>
+          </div>
         </div>
-      </div>
-      <div className="product-box">
-        <div clasName="product-input">
-          <TextField
-            type="text"
-            className="quantity-input"
-            id="quantity"
-            label="Quantity"
-            variant="outlined"
-            value={quantity}
-            onChange={handleChange}
-          />
-        </div>
-        <h1 className="pounds-total">lbs </h1>
-        <h1 className="pounds-total">=</h1>
-        <h1 className="pounds-total">Total:$</h1>
-        <h1 className="product-output-price"> {quantity}</h1>
-        <ShoppingCartIcon className="product-icon" />
       </div>
     </div>
   );

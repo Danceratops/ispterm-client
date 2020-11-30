@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import Card from "../components/card";
-import Button from "@material-ui/core/Button";
-import { Link } from "react-router-dom";
 
 const Search = () => {
   const [products, setProducts] = useState(null);
