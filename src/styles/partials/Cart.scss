@@ -1,0 +1,195 @@
+.home {
+  .header {
+    line-height: 150px;
+    text-align: center;
+    font-weight: 100;
+    font-style: italic;
+    color: $green;
+    font-size: 30px;
+    .main-table {
+      width: 70%;
+      margin: 0 auto;
+      border: 1px solid black;
+      border-radius: 20px;
+      background-color: #e7ebe8;
+      th,
+      td {
+        white-space: nowrap;
+        color: $green;
+        font-size: 30px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+          "Helvetica Neue", sans-serif;
+      }
+      .image-title-cart {
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .image {
+          width: 100px;
+          height: auto;
+          border-radius: 10px;
+          position: relative;
+        }
+      }
+      .image-cart {
+        height: 200px;
+      }
+    }
+  }
+
+  .cart-text {
+    color: $green;
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .cart-container {
+    margin: 25px auto;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 1px solid $green;
+    border-radius: 20px;
+    width: 70%;
+    background-color: #e7ebe8;
+
+    .ship-container {
+      width: 400px;
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        .state-zip {
+          .state-box,
+          .zip-box {
+            width: 200px;
+          }
+        }
+      }
+    }
+
+    .divider {
+      background-color: $green;
+      width: 3px;
+      margin: 10px;
+    }
+
+    .checkout-container {
+      width: 400px;
+      text-align: center;
+      .visa-button {
+        width: auto;
+        height: 60px;
+        position: relative;
+        margin-right: 20px;
+      }
+
+      .paypal-button {
+        width: auto;
+        height: 60px;
+        position: relative;
+        margin-left: 30px;
+      }
+      .billing-information {
+        .bill-header {
+          color: $green;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 30px;
+          float: left;
+          width: 50%;
+          padding: 10px;
+          line-height: 2;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+
+        .bill-extension {
+          color: $green;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+            "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+            "Helvetica Neue", sans-serif;
+          font-size: 30px;
+          float: left;
+          width: 50%;
+          padding: 10px;
+          line-height: 2;
+        }
+      }
+    }
+
+    .react-icon {
+      transform: scale(2);
+      margin-right: 20px;
+    }
+  }
+}
+
+@media only screen and (max-width: $laptop) {
+  .home {
+    .header {
+      .main-table {
+        th {
+          font-size: 3vw;
+          white-space: nowrap;
+        }
+        .image-title-cart {
+          font-size: 3vw;
+          word-wrap: break-word;
+          height: auto;
+          display: block;
+          .image {
+            display: none;
+          }
+        }
+        .image-cart {
+          font-size: 3vw;
+          height: auto;
+        }
+      }
+    }
+
+    .cart-text {
+      color: #4a7255;
+      margin-right: 150px;
+    }
+
+    .cart-container {
+      flex-direction: column;
+      text-align: left;
+      justify-content: left;
+      .ship-container {
+        .input-container {
+          width: fit-content;
+        }
+      }
+      .divider {
+        width: 0px;
+        font-size: 0px;
+        margin: 0px;
+      }
+
+      .checkout-container {
+        .visa-button,
+        .paypal-button {
+          width: 200px;
+          height: 60px;
+          margin-left: 0px;
+          margin-right: 150px;
+          margin-top: 10px;
+        }
+        .billing-information {
+          .bill-header,
+          .bill-extension {
+            text-align: left;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+}
