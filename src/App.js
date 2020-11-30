@@ -8,6 +8,8 @@ import search from "./Pages/search";
 import product from "./Pages/products";
 import signout from "./Pages/Signout";
 import thankyou from "./Pages/thankyou";
+import page404 from "./Pages/page404";
+import noinfo from "./Pages/noinfo";
 
 import Nav from "./components/navbar";
 
@@ -15,8 +17,7 @@ import "./styles/imports.scss";
 import Footer from "./components/footer";
 import Axios from "axios";
 
-Axios.defaults.baseURL="https://us-central1-isp-term.cloudfunctions.net/api";
-
+Axios.defaults.baseURL = "https://us-central1-isp-term.cloudfunctions.net/api";
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
           <Route exact path="/signout" component={signout} />
           <Route exact path="/thankyou" component={thankyou} />
           <Route exact path="/products/:productId" component={product} />
+          <Route exact path="/noinfo" component={noinfo} />
+          <Route exact path="*" component={page404} />
         </Switch>
       </Router>
       <Footer />
