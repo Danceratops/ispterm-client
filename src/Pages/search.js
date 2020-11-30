@@ -3,14 +3,19 @@ import axios from "axios";
 
 import Card from "../components/card";
 
+import CircularProgress from "@material-ui/core/CircularProgress";
+
 const Search = () => {
   const [products, setProducts] = useState(null);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
+    setLoading(true);
     axios
       .get("/products")
       .then((res) => {
         console.log(res.data);
         setProducts(res.data);
+        setLoading(false);
       })
       .catch((err) => {
         console.log(err);
@@ -28,10 +33,8 @@ const Search = () => {
       />
     ))
   ) : (
-    <p>Loading...</p>
+    <div className='progress'>{loading && <CircularProgress size={100} className="progress" />}</div>
   );
-
-  console.log(productMarkUp);
   return <div className="search">{productMarkUp}</div>;
 };
 

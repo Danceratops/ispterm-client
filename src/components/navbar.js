@@ -1,5 +1,5 @@
-import React from "react";
-import { Link} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { fade, makeStyles } from "@material-ui/core/styles";
 
@@ -14,7 +14,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import HomeIcon from "@material-ui/icons/Home";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
+import { Storefront } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -84,9 +84,14 @@ export default function Nav() {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+  const [inCart, setInCart] = useState(0);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
+
+  useEffect(() => {
+    setInCart(localStorage.getItem("cartAmount"));
+  }, [inCart]);
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -112,7 +117,7 @@ export default function Nav() {
 
   const tokenNull = (
     <div>
-      {(localStorage.getItem("token") !== null) ? (
+      {localStorage.getItem("token") !== null ? (
         <MenuItem onClick={logout} component={Link} to="/signout">
           Logout
         </MenuItem>
@@ -163,12 +168,24 @@ export default function Nav() {
       </MenuItem>
       <MenuItem component={Link} to="/cart">
         <IconButton aria-label="Go to shopping cart" color="inherit">
-          <Badge color="secondary">
+          <Badge color="secondary" badgeContent={inCart}>
             <ShoppingCartIcon />
           </Badge>
         </IconButton>
         <p>Shopping Cart</p>
       </MenuItem>
+      <MenuItem component={Link} to="/search">
+        <IconButton
+          aria-label="Go to search page"
+          color="inherit"
+          component={Link}
+          to="/search"
+        >
+          <Storefront />
+          <p>See store front</p>
+        </IconButton>
+      </MenuItem>
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           aria-label="account of current user"
@@ -203,7 +220,7 @@ export default function Nav() {
               component={Link}
               to="/cart"
             >
-              <Badge color="secondary">
+              <Badge color="secondary" badgeContent={inCart}>
                 <ShoppingCartIcon />
               </Badge>
             </IconButton>
@@ -213,9 +230,7 @@ export default function Nav() {
               component={Link}
               to="/search"
             >
-              <Badge color="secondary">
-                <AddCircleOutlineIcon />
-              </Badge>
+              <Storefront />
             </IconButton>
             <IconButton
               edge="end"
