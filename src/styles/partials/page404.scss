@@ -1,0 +1,24 @@
+.container-404 {
+  position: relative;
+  top: 300px;
+  border: 2px solid $green;
+  height: 11em;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $lightgray;
+
+  .error-text {
+    text-align: center;
+    color: $green;
+  }
+
+  @media only screen and (max-width: $laptop) {
+    margin-bottom: 500px;
+  }
+  @media only screen and (max-width: 1900px) {
+    margin-bottom: 500px;
+  }
+}

@@ -169,7 +169,7 @@ const Cart = () => {
           <h4 className="cart-text">Pay With</h4>
           <Button
             component={Link}
-            to="/wrapup"
+            to="/noinfo"
             className="visa-button"
             variant="contained"
             color="primary"
@@ -180,7 +180,7 @@ const Cart = () => {
           </Button>
           <Button
             component={Link}
-            to="/wrapup"
+            to="/noinfo"
             className="paypal-button"
             variant="contained"
             color="primary"
