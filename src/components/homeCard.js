@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 
 import "../styles/imports.scss";
 
-const HomeCard = ({ children, Name, Description, Price, Image }) => {
+const HomeCard = ({ Name, Description, Price, Image }) => {
   return (
     <div class="container">
       <div class="card">
         <div class="image">
-          <img class="img" src={Image} />
+          <img class="img" src={Image} alt={Name}/>
         </div>
         <div class="product-title">
           <h4>{Name}</h4>
