@@ -1,3 +1,26 @@
+# Homegrown Herbs
+
+The Homegrown Herbs project offers an interactive consumer experience when it comes to shopping for all-organic and natural herbs. Utilizing the local storage which Google's Firebase platform has to offer, this application is capable of both registering new customers, or recalling the frequent ones. As you browse the application, be sure to note the following features:
+
+## Available features
+
+1. Sign-up/Login \
+   Create or log back into your free Homegrown Herbs account using a valid email and password.
+2. Browse available products \
+   Use the '+' icon at the upper right-hand corner to navigate to the search page and browse all of our many choices of herbs.
+3. Add herb to cart \
+   See a product you like? Click on its title to navigate to the products page, indicate a quantity you wish to purcahse, and add to cart using the cart icon.
+4. Check-out \
+   While the current version does not support transactions, indicate your shipping instructions as well as how you would like to pay. None of the submitted information is stored in our records.
+5. Multi-Device Formatting \
+   Like shopping on-the-go? View the application on a mobile device or tablet!
+
+## Quick Start
+
+### `npm install`
+
+### `npm start`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
