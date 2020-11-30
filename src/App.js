@@ -9,6 +9,7 @@ import search from "./Pages/search";
 import signout from "./Pages/Signout";
 import thankyou from "./Pages/thankyou";
 import page404 from "./Pages/page404";
+import noinfo from "./Pages/noinfo";
 
 import Nav from "./components/navbar";
 
@@ -30,6 +31,7 @@ function App() {
           <Route exact path="/signout" component={signout} />
           <Route exact path="/thankyou" component={thankyou} />
           <Route exact path="/products/:productId" component={products} />
+          <Route exact path="/noinfo" component={noinfo} />
           <Route exact path="*" component={page404} />
         </Switch>
       </Router>

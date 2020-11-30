@@ -6,7 +6,7 @@ const Page404 = () => {
     <div className="container-404">
       <h1 className="error-text">404 ERROR!</h1>
       <h3 className="error-text">You have entered the wrong garden!</h3>
-      <div className="button-404">
+      <div className="button-error">
         <Button
           component={Link}
           to="/"
