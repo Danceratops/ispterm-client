@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import ShoppingCart from "../components/shoppingCart";
@@ -73,24 +73,41 @@ const stateAbbreviations = [
 ];
 
 const Cart = () => {
-  const [subTotal] = useState("");
-  return (
-    <div class="home">
-      <div class="header">
+  const [subTotal] = useState(
+    localStorage.getItem("subtotal") || 0
+  );
+  const [cart, setCart] = useState(null);
+
+  useEffect(() => {
+    setCart(JSON.parse(localStorage.getItem("cart")) || []);
+  }, []);
+  var cartMarkUp = cart ? (
+    cart.map((item) => (
+      <ShoppingCart
+        key={item.productName}
+        image={item.productImage}
+        title={item.productName}
+        quantity={item.productQuantity}
+        price={item.productPrice}
+        total={item.productTotal}
+      />
+    ))
+  ) : (
+    <p>Nothing to see...</p>
+  );
+
+  var pageMarkUp = (
+    <div className="home">
+      <div className="header">
         <h4 className="cart-text">Your Basket...</h4>
-        <table class="main-table">
+        <table className="main-table">
           <tr>
             <th> Item </th>
             <th> Quantity(lbs.) </th>
             <th> Cost Per Lb </th>
             <th> Total </th>
           </tr>
-          <ShoppingCart
-            image="https://www.uakron.edu/contentAsset/image/1c5c9d78-d829-4a80-ba2a-32f1f70b9944/fileAsset/byInode/1/filter/Resize/resize_w/140"
-            title="Xiao's Favorite"
-            quantity="7"
-            price="74.99"
-          />
+          {cartMarkUp}
         </table>
       </div>
       <div className="cart-container">
@@ -121,6 +138,7 @@ const Cart = () => {
               label="State"
               variant="outlined"
               type="state"
+              value=""
             >
               {stateAbbreviations.map((option) => (
                 <MenuItem key={option} value={option}>
@@ -182,17 +200,28 @@ const Cart = () => {
               Total
             </div>
             <div className="bill-extension">
-              {subTotal}
-              <br></br>
-              $1.27
+              ${subTotal}
+              <br></br>${(subTotal * 0.08).toFixed(2)}
               <br></br>
               $5.55
-              <br></br>
-              $20.65
+              <br></br>${parseFloat(subTotal) + 1.27 + 5.55}
             </div>
           </div>
         </form>
       </div>
+    </div>
+  );
+
+  var shownContent = localStorage.getItem("token") !== null;
+
+  return shownContent ? (
+    pageMarkUp
+  ) : (
+    <div className="thank-you-container">
+      <h1>
+        Please create and account or login to continue the checkout process.
+      </h1>
+      <Link to="/signup" className='thank-you-link'>Here</Link>
     </div>
   );
 };
